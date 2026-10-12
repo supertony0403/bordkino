@@ -43,6 +43,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>CPSupportsInstrumentClusterNavigationScene</key>
+	<true/>
 	<key>MinimumOSVersion</key>
 	<string>15.0</string>
 	<key>NSAppTransportSecurity</key>
@@ -58,6 +60,17 @@
 		<true/>
 		<key>UISceneConfigurations</key>
 		<dict>
+			<key>CPTemplateApplicationInstrumentClusterSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneClassName</key>
+					<string>CPTemplateApplicationInstrumentClusterScene</string>
+					<key>UISceneConfigurationName</key>
+					<string>Cluster</string>
+					<key>UISceneDelegateClassName</key>
+					<string>BKClusterSceneDelegate</string>
+				</dict>
+			</array>
 			<key>CPTemplateApplicationSceneSessionRoleApplication</key>
 			<array>
 				<dict>

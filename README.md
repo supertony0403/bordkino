@@ -25,6 +25,9 @@ Symbole erscheinen auf dem CarPlay-Homescreen. Nimm die, die läuft.
 - Bild bis 1080p (HLS), Qualität begrenzbar auf 720p/480p fürs mobile Datenvolumen
 - Lenkradtasten: Play/Pause, Vor (+30 s), Zurück (−10 s); Now-Playing-Anzeige mit Vorschaubild
 - CarPlay trennen → Wiedergabe pausiert
+- **Fahrerdisplay** (nur *Bordkino Navi*, nur wenn das Auto Navigations-Apps dort ein Bild anbietet):
+  zeigt das laufende Video **nur bei bestätigtem Stillstand** – gültiges GPS-Tempo unter 3 km/h, nicht älter
+  als 30 s. Ohne gültige Messung (Tiefgarage) bleibt das Fahrerdisplay dunkel. Diese Sperre ist fest eingebaut.
 - Zwei Renderer: **A** (`AVPlayerLayer`) und **B** (Bildpumpe mit Metal im eigenen Prozess).
   Bleibt das Bild im Auto schwarz, im Player auf „A/B“ tippen.
 - Diagnose im Auto und am Handy: Testbild, Apple-Testvideo mit Renderer A/B, Web-Modus, Protokoll
@@ -58,6 +61,9 @@ Im Auto (stehend):
 - [ ] Suche (eigene Tastatur) → Video starten. Lenkradtasten testen.
 - [ ] **Bordkino Navi**: „Suche“ oben links → Video wählen → läuft unter den Kartenknöpfen?
 - [ ] Losfahren: Bild verschwindet, Ton läuft weiter. Anhalten: Bild kommt nach ~5 s zurück.
+- [ ] **Fahrerdisplay (Navi):** Video starten, im Stand in der Fahrzeug-Anzeige die Navigation/Karte wählen.
+      Steht im Protokoll „Fahrerdisplay-Fenster …“, bietet das Auto die Fläche an. Fehlt die Zeile, schickt
+      dein Auto nur Abbiegehinweise und es gibt dort keine Bildfläche.
 - [ ] CarPlay-Kabel ziehen: Wiedergabe pausiert.
 
 Wenn etwas nicht geht: Einstellungen → Diagnose → **Protokoll anzeigen** → Teilen.

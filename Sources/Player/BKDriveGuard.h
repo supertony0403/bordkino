@@ -11,6 +11,10 @@ extern NSNotificationName const BKDriveGuardDidChangeNotification;
 @property (nonatomic, readonly) BOOL driving;
 @property (nonatomic, readonly) BOOL locationAvailable;
 @property (nonatomic, readonly) double lastSpeedKmh;   // -1 when unknown
+@property (nonatomic, readonly, nullable) NSDate *lastSpeedAt;
+/// Fail-safe check for the instrument cluster: YES only with a fresh (< 30 s)
+/// valid GPS speed below 3 km/h. Unknown speed counts as moving.
+- (BOOL)confirmedStationary;
 - (void)start;
 - (void)stop;
 @end

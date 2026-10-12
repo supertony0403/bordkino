@@ -8,11 +8,13 @@ static const double kDrivingKmh = 10;
 static const double kStandingKmh = 3;
 static const NSTimeInterval kDrivingAfter = 3;
 static const NSTimeInterval kStandingAfter = 5;
+static const NSTimeInterval kMaxSpeedAge = 30;
 
 @interface BKDriveGuard () <CLLocationManagerDelegate>
 @property (nonatomic, readwrite) BOOL driving;
 @property (nonatomic, readwrite) BOOL locationAvailable;
 @property (nonatomic, readwrite) double lastSpeedKmh;
+@property (nonatomic, readwrite, nullable) NSDate *lastSpeedAt;
 @end
 
 @implementation BKDriveGuard {
@@ -57,6 +59,7 @@ static const NSTimeInterval kStandingAfter = 5;
     [_manager stopUpdatingLocation];
     _aboveSince = _belowSince = nil;
     self.lastSpeedKmh = -1;
+    self.lastSpeedAt = nil;
     [self setDrivingNotify:NO];
 }
 
@@ -82,6 +85,7 @@ static const NSTimeInterval kStandingAfter = 5;
     double kmh = location.speed * 3.6;
     self.lastSpeedKmh = kmh;
     NSDate *now = location.timestamp ?: [NSDate date];
+    self.lastSpeedAt = now;
     if (kmh > kDrivingKmh) {
         _belowSince = nil;
         if (!_aboveSince) _aboveSince = now;
@@ -93,6 +97,13 @@ static const NSTimeInterval kStandingAfter = 5;
     } else {
         _aboveSince = _belowSince = nil;   // hysteresis band: keep current state
     }
+}
+
+- (BOOL)confirmedStationary {
+    NSDate *at = self.lastSpeedAt;
+    return self.locationAvailable && !self.driving && at != nil &&
+           self.lastSpeedKmh >= 0 && self.lastSpeedKmh < kStandingKmh &&
+           -[at timeIntervalSinceNow] < kMaxSpeedAge;
 }
 
 - (void)setDrivingNotify:(BOOL)driving {

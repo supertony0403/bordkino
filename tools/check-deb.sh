@@ -44,6 +44,9 @@ assert sys.argv[3] in roles, list(roles)
 assert 'UIWindowSceneSessionRoleApplication' in roles
 assert 'audio' in p['UIBackgroundModes']
 assert p['NSLocationWhenInUseUsageDescription']
+if sys.argv[2].endswith('.navi'):
+    assert p.get('CPSupportsInstrumentClusterNavigationScene') is True
+    assert roles['CPTemplateApplicationInstrumentClusterSceneSessionRoleApplication'][0]['UISceneDelegateClassName'] == 'BKClusterSceneDelegate'
 PY
   for f in extractor.js AppIcon60x60@2x.png AppIcon60x60@3x.png; do
     [ -f "$app/$f" ] || fail "$name: $f fehlt im Bündel"
