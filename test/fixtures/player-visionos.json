@@ -1,0 +1,112 @@
+{
+ "playabilityStatus": {
+  "status": "OK",
+  "playableInEmbed": true
+ },
+ "videoDetails": {
+  "videoId": "9bZkp7q19f0",
+  "title": "PSY - GANGNAM STYLE(강남스타일) M/V",
+  "lengthSeconds": "252",
+  "channelId": "UCrDkAvwZum-UTjHmzDI2iIw",
+  "author": "officialpsy",
+  "isLiveContent": false,
+  "thumbnail": {
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    {
+     "url": "https://i.ytimg.com/vi/9bZkp7q19f0/hq720.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   ]
+  }
+ },
+ "streamingData": {
+  "expiresInSeconds": "21540",
+  "formats": [],
+  "adaptiveFormats": [
+   {
+    "itag": 137,
+    "url": "https://rr5---sn-4g5lzns7.googlevideo.com/videoplayback?expire=1791857111&ei=dz3NaqiFKPez8uMPx9iPgAU&ip=203.0.113.7&id=o-ADLM0sMTV0kojqUx0UHS7YOCJlFuidgXrJp1Ltfb4he2&itag=137&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=1204&met=1791835511%2C&mh=hJ&mm=18%2C26&mn=sn-4g5lzns7%2Csn-ajh0j5-55&ms=aub%2Conr&mv=m&mvi=5&pl=26&rms=aub%2Caub&initcwndbps=2495500&bui=AWzQHwpGWNm6WTlo7BRSrl6g8l04F-sT3LSzVYkjyhFPW_HZ_JsEvOzAJ9G1XdJcKpN8wTnepVgavPfg&spc=I-rgIcpnU4MBUUYxBElg9GjUdt-hKOk_wNyhHiJYig2ITZQqlV4av6Ro4M6d&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=107750453&dur=252.168&lmt=1712655909087044&mt=1791835045&fvip=2&keepalive=yes&fexp=51565116%2C52112905%2C52184231%2C52250513&c=VISIONOS&txp=4535434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=FAKESIG&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=FAKESIG",
+    "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+    "bitrate": 4470868,
+    "width": 1920,
+    "height": 1080,
+    "initRange": {
+     "start": "0",
+     "end": "740"
+    },
+    "indexRange": {
+     "start": "741",
+     "end": "1348"
+    },
+    "lastModified": "1712655909087044",
+    "contentLength": "107750453",
+    "quality": "hd1080",
+    "fps": 24,
+    "qualityLabel": "1080p",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 3418370,
+    "approxDurationMs": "252168",
+    "qualityOrdinal": "QUALITY_ORDINAL_1080P"
+   },
+   {
+    "itag": 136,
+    "url": "https://rr5---sn-4g5lzns7.googlevideo.com/videoplayback?expire=1791857111&ei=dz3NaqiFKPez8uMPx9iPgAU&ip=203.0.113.7&id=o-ADLM0sMTV0kojqUx0UHS7YOCJlFuidgXrJp1Ltfb4he2&itag=136&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=1204&met=1791835511%2C&mh=hJ&mm=18%2C26&mn=sn-4g5lzns7%2Csn-ajh0j5-55&ms=aub%2Conr&mv=m&mvi=5&pl=26&rms=aub%2Caub&initcwndbps=2495500&bui=AWzQHwpGWNm6WTlo7BRSrl6g8l04F-sT3LSzVYkjyhFPW_HZ_JsEvOzAJ9G1XdJcKpN8wTnepVgavPfg&spc=I-rgIcpnU4MBUUYxBElg9GjUdt-hKOk_wNyhHiJYig2ITZQqlV4av6Ro4M6d&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=33892554&dur=252.168&lmt=1712656157322130&mt=1791835045&fvip=2&keepalive=yes&fexp=51565116%2C52112905%2C52184231%2C52250513&c=VISIONOS&txp=4535434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=FAKESIG&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=FAKESIG",
+    "mimeType": "video/mp4; codecs=\"avc1.4D401F\"",
+    "bitrate": 2134790,
+    "width": 1280,
+    "height": 720,
+    "initRange": {
+     "start": "0",
+     "end": "738"
+    },
+    "indexRange": {
+     "start": "739",
+     "end": "1346"
+    },
+    "lastModified": "1712656157322130",
+    "contentLength": "33892554",
+    "quality": "hd720",
+    "fps": 24,
+    "qualityLabel": "720p",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 1075237,
+    "approxDurationMs": "252168",
+    "qualityOrdinal": "QUALITY_ORDINAL_720P"
+   },
+   {
+    "itag": 140,
+    "url": "https://rr5---sn-4g5lzns7.googlevideo.com/videoplayback?expire=1791857111&ei=dz3NaqiFKPez8uMPx9iPgAU&ip=203.0.113.7&id=o-ADLM0sMTV0kojqUx0UHS7YOCJlFuidgXrJp1Ltfb4he2&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=1204&met=1791835511%2C&mh=hJ&mm=18%2C26&mn=sn-4g5lzns7%2Csn-ajh0j5-55&ms=aub%2Conr&mv=m&mvi=5&pl=26&rms=aub%2Caub&initcwndbps=2495500&bui=AWzQHwpGWNm6WTlo7BRSrl6g8l04F-sT3LSzVYkjyhFPW_HZ_JsEvOzAJ9G1XdJcKpN8wTnepVgavPfg&spc=I-rgIcpnU4MBUUYxBElg9GjUdt-hKOk_wNyhHiJYig2ITZQqlV4av6Ro4M6d&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=4083640&dur=252.261&lmt=1712653867474717&mt=1791835045&fvip=2&keepalive=yes&fexp=51565116%2C52112905%2C52184231%2C52250513&c=VISIONOS&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=FAKESIG&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=FAKESIG",
+    "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+    "bitrate": 130413,
+    "initRange": {
+     "start": "0",
+     "end": "631"
+    },
+    "indexRange": {
+     "start": "632",
+     "end": "975"
+    },
+    "lastModified": "1712653867474717",
+    "contentLength": "4083640",
+    "quality": "tiny",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 129505,
+    "highReplication": true,
+    "audioQuality": "AUDIO_QUALITY_MEDIUM",
+    "approxDurationMs": "252261",
+    "audioSampleRate": "44100",
+    "audioChannels": 2,
+    "loudnessDb": 6.69,
+    "trackAbsoluteLoudnessLkfs": -7.31,
+    "qualityOrdinal": "QUALITY_ORDINAL_UNKNOWN"
+   }
+  ],
+  "hlsManifestUrl": "https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1791857111/ei/dz3NaqiFKPez8uMPx9iPgAU/ip/203.0.113.7/id/f5b664a7bab5f5fd/source/youtube/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/playback_host/rr5---sn-4g5lzns7.googlevideo.com/cps/1204/met/1791835511%2C/mh/hJ/mm/18%2C26/mn/sn-4g5lzns7%2Csn-ajh0j5-55/ms/aub%2Conr/mv/m/mvi/5/pl/26/rms/aub%2Caub/hfr/1/demuxed/1/tts_caps/1/maudio/1/initcwndbps/2495500/bui/AWzQHwq93WTBCnAF3WA_1kcMahqtKtsIFH3Hq7ReiYqT1FLekk6n4Xte7CsecXNk3U3hZZ_sZboYIgZe/spc/I-rgIcpkU4MBUUYxBElg9GjUdt-hKOk_wNyhHiJYig2ITZQqlV4av6Ro4P6ev-Y/vprv/1/go/1/rqh/5/mt/1791835045/fvip/2/nvgoi/1/short_key/1/ncsapi/1/keepalive/yes/fexp/51565116%2C52112905%2C52184231%2C52250513/dover/13/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cdemuxed%2Ctts_caps%2Cmaudio%2Cbui%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AE0s2JYwRQIgFtq_pNPP713fYWhhvxWzZ0G3zDicYs7DDgn4lDqGznkCIQCPABd9brkOwxjLwo8Zvb-9k1V0wGVf8lhHjv8wynPjRQ%3D%3D/lsparams/playback_host%2Ccps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps/lsig/APaTxxMwRQIgTq76P7cNFcOkkJz-5M244Kti8Y_yivDXzMf-bfrV3rsCIQDrx5P5t6P0kllncVUa6_nF3xcvLd14PBC-DxWp85TO_A%3D%3D/file/index.m3u8"
+ }
+}

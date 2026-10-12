@@ -1,0 +1,131 @@
+{
+ "playabilityStatus": {
+  "status": "OK",
+  "playableInEmbed": true,
+  "offlineability": {
+   "buttonRenderer": {
+    "navigationEndpoint": {
+     "clickTrackingParams": "CA4Q6ewBIhMIn7nMuaO1lwMVoV16BR1Tyif5ygEE2Wl_nQ==",
+     "ypcGetOfflineUpsellEndpoint": {
+      "params": "ChPqqN25AQ0KCzliWmtwN3ExOWYwIgs5YlprcDdxMTlmMCoVCAkYAVIPCgs5YlprcDdxMTlmMCAB"
+     }
+    },
+    "trackingParams": "CA4Q6ewBIhMIn7nMuaO1lwMVoV16BR1Tyif5"
+   }
+  },
+  "pictureInPicture": {
+   "pictureInPictureRenderer": {
+    "offByDefault": false
+   }
+  },
+  "miniplayer": {
+   "miniplayerRenderer": {
+    "playbackMode": "PLAYBACK_MODE_ALLOW",
+    "enableStashedPlayback": false
+   }
+  },
+  "contextParams": "Q0FFU0FnZ0I="
+ },
+ "videoDetails": {
+  "videoId": "9bZkp7q19f0",
+  "title": "PSY - GANGNAM STYLE(강남스타일) M/V",
+  "lengthSeconds": "252",
+  "channelId": "UCrDkAvwZum-UTjHmzDI2iIw",
+  "author": "officialpsy",
+  "isLiveContent": false,
+  "thumbnail": {
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    {
+     "url": "https://i.ytimg.com/vi/9bZkp7q19f0/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    }
+   ]
+  }
+ },
+ "streamingData": {
+  "expiresInSeconds": "21540",
+  "formats": [],
+  "adaptiveFormats": [
+   {
+    "itag": 137,
+    "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+    "bitrate": 4470868,
+    "width": 1920,
+    "height": 1080,
+    "initRange": {
+     "start": "0",
+     "end": "740"
+    },
+    "indexRange": {
+     "start": "741",
+     "end": "1348"
+    },
+    "lastModified": "1712655909087044",
+    "contentLength": "107750453",
+    "quality": "hd1080",
+    "fps": 24,
+    "qualityLabel": "1080p",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 3418370,
+    "approxDurationMs": "252168",
+    "qualityOrdinal": "QUALITY_ORDINAL_1080P"
+   },
+   {
+    "itag": 136,
+    "mimeType": "video/mp4; codecs=\"avc1.4D401F\"",
+    "bitrate": 2134790,
+    "width": 1280,
+    "height": 720,
+    "initRange": {
+     "start": "0",
+     "end": "738"
+    },
+    "indexRange": {
+     "start": "739",
+     "end": "1346"
+    },
+    "lastModified": "1712656157322130",
+    "contentLength": "33892554",
+    "quality": "hd720",
+    "fps": 24,
+    "qualityLabel": "720p",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 1075237,
+    "approxDurationMs": "252168",
+    "qualityOrdinal": "QUALITY_ORDINAL_720P"
+   },
+   {
+    "itag": 140,
+    "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+    "bitrate": 130413,
+    "initRange": {
+     "start": "0",
+     "end": "631"
+    },
+    "indexRange": {
+     "start": "632",
+     "end": "975"
+    },
+    "lastModified": "1712653867474717",
+    "contentLength": "4083640",
+    "quality": "tiny",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 129505,
+    "highReplication": true,
+    "audioQuality": "AUDIO_QUALITY_MEDIUM",
+    "approxDurationMs": "252261",
+    "audioSampleRate": "44100",
+    "audioChannels": 2,
+    "loudnessDb": 6.69,
+    "trackAbsoluteLoudnessLkfs": -7.31,
+    "qualityOrdinal": "QUALITY_ORDINAL_UNKNOWN"
+   }
+  ]
+ }
+}

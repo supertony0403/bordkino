@@ -1,0 +1,146 @@
+{
+ "playabilityStatus": {
+  "status": "OK",
+  "playableInEmbed": true,
+  "miniplayer": {
+   "miniplayerRenderer": {
+    "playbackMode": "PLAYBACK_MODE_ALLOW"
+   }
+  },
+  "contextParams": "Q0FFU0FnZ0I="
+ },
+ "videoDetails": {
+  "videoId": "9bZkp7q19f0",
+  "title": "PSY - GANGNAM STYLE(강남스타일) M/V",
+  "lengthSeconds": "252",
+  "channelId": "UCrDkAvwZum-UTjHmzDI2iIw",
+  "author": "officialpsy",
+  "isLiveContent": false,
+  "thumbnail": {
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/9bZkp7q19f0/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    {
+     "url": "https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    {
+     "url": "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    {
+     "url": "https://i.ytimg.com/vi/9bZkp7q19f0/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    }
+   ]
+  }
+ },
+ "streamingData": {
+  "expiresInSeconds": "21540",
+  "formats": [
+   {
+    "itag": 18,
+    "url": "https://rr1---sn-4g5edndy.googlevideo.com/videoplayback?expire=1791857112&ei=dz3NaubON_3LmLAPmsGEqAk&ip=203.0.113.7&id=o-AONwL1kIAGVMBfocNrNFQWB_ohml254wFgZDwZYEsP-K&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=924&met=1791835511%2C&mh=hJ&mm=18%2C26&mn=sn-4g5edndy%2Csn-ajh0j5-55&ms=aub%2Conr&mv=m&mvi=1&pl=26&rms=aub%2Caub&initcwndbps=2488375&bui=AWzQHwoittO_BWlKf1uqYJxNvYhneLNBxPCOqh9xAxqcE55dtMncIjZwkO_Pobnlt7IVUL_6Rs1YkXlH&spc=I-rgIQYh6jX9ipXoFEqMKeH8UNgaWspAnTtNVhErJHfQsElWwAFZ&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=252.261&lmt=1772165328857803&mt=1791835045&fvip=2&fexp=51565116%2C52112905%2C52184231%2C52250513&c=ANDROID_VR&txp=4538534&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=FAKESIG&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=FAKESIG",
+    "mimeType": "video/mp4; codecs=\"avc1.42001E, mp4a.40.2\"",
+    "bitrate": 497322,
+    "width": 640,
+    "height": 360,
+    "lastModified": "1772165328857803",
+    "quality": "medium",
+    "fps": 24,
+    "qualityLabel": "360p",
+    "projectionType": "RECTANGULAR",
+    "audioQuality": "AUDIO_QUALITY_LOW",
+    "approxDurationMs": "252261",
+    "audioSampleRate": "44100",
+    "audioChannels": 2,
+    "qualityOrdinal": "QUALITY_ORDINAL_360P"
+   }
+  ],
+  "adaptiveFormats": [
+   {
+    "itag": 137,
+    "url": "https://rr1---sn-4g5edndy.googlevideo.com/videoplayback?expire=1791857112&ei=dz3NaubON_3LmLAPmsGEqAk&ip=203.0.113.7&id=o-AONwL1kIAGVMBfocNrNFQWB_ohml254wFgZDwZYEsP-K&itag=137&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=924&met=1791835511%2C&mh=hJ&mm=18%2C26&mn=sn-4g5edndy%2Csn-ajh0j5-55&ms=aub%2Conr&mv=m&mvi=1&pl=26&rms=aub%2Caub&initcwndbps=2488375&bui=AWzQHwqH665ipE5WsTXsoXNJoVuqPSdJMTm9IURA2GZKWHVmPrHLy6RwURaT01Z4-8Zu6rmgJI7LoKYH&spc=I-rgISwo0DDPgpfQPEvOE8nhEt8iR7JBJzsTWnM7rW7c&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=107750453&dur=252.168&lmt=1712655909087044&mt=1791835045&fvip=2&keepalive=yes&fexp=51565116%2C52112905%2C52184231%2C52250513&c=ANDROID_VR&txp=4535434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=FAKESIG&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=FAKESIG",
+    "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+    "bitrate": 4470868,
+    "width": 1920,
+    "height": 1080,
+    "initRange": {
+     "start": "0",
+     "end": "740"
+    },
+    "indexRange": {
+     "start": "741",
+     "end": "1348"
+    },
+    "lastModified": "1712655909087044",
+    "contentLength": "107750453",
+    "quality": "hd1080",
+    "fps": 24,
+    "qualityLabel": "1080p",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 3418370,
+    "approxDurationMs": "252168",
+    "qualityOrdinal": "QUALITY_ORDINAL_1080P"
+   },
+   {
+    "itag": 136,
+    "url": "https://rr1---sn-4g5edndy.googlevideo.com/videoplayback?expire=1791857112&ei=dz3NaubON_3LmLAPmsGEqAk&ip=203.0.113.7&id=o-AONwL1kIAGVMBfocNrNFQWB_ohml254wFgZDwZYEsP-K&itag=136&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=924&met=1791835511%2C&mh=hJ&mm=18%2C26&mn=sn-4g5edndy%2Csn-ajh0j5-55&ms=aub%2Conr&mv=m&mvi=1&pl=26&rms=aub%2Caub&initcwndbps=2488375&bui=AWzQHwqH665ipE5WsTXsoXNJoVuqPSdJMTm9IURA2GZKWHVmPrHLy6RwURaT01Z4-8Zu6rmgJI7LoKYH&spc=I-rgISwo0DDPgpfQPEvOE8nhEt8iR7JBJzsTWnM7rW7c&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=33892554&dur=252.168&lmt=1712656157322130&mt=1791835045&fvip=2&keepalive=yes&fexp=51565116%2C52112905%2C52184231%2C52250513&c=ANDROID_VR&txp=4535434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=FAKESIG&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=FAKESIG",
+    "mimeType": "video/mp4; codecs=\"avc1.4D401F\"",
+    "bitrate": 2134790,
+    "width": 1280,
+    "height": 720,
+    "initRange": {
+     "start": "0",
+     "end": "738"
+    },
+    "indexRange": {
+     "start": "739",
+     "end": "1346"
+    },
+    "lastModified": "1712656157322130",
+    "contentLength": "33892554",
+    "quality": "hd720",
+    "fps": 24,
+    "qualityLabel": "720p",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 1075237,
+    "approxDurationMs": "252168",
+    "qualityOrdinal": "QUALITY_ORDINAL_720P"
+   },
+   {
+    "itag": 140,
+    "url": "https://rr1---sn-4g5edndy.googlevideo.com/videoplayback?expire=1791857112&ei=dz3NaubON_3LmLAPmsGEqAk&ip=203.0.113.7&id=o-AONwL1kIAGVMBfocNrNFQWB_ohml254wFgZDwZYEsP-K&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=924&met=1791835511%2C&mh=hJ&mm=18%2C26&mn=sn-4g5edndy%2Csn-ajh0j5-55&ms=aub%2Conr&mv=m&mvi=1&pl=26&rms=aub%2Caub&initcwndbps=2488375&bui=AWzQHwqH665ipE5WsTXsoXNJoVuqPSdJMTm9IURA2GZKWHVmPrHLy6RwURaT01Z4-8Zu6rmgJI7LoKYH&spc=I-rgISwo0DDPgpfQPEvOE8nhEt8iR7JBJzsTWnM7rW7c&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=4083640&dur=252.261&lmt=1712653867474717&mt=1791835045&fvip=2&keepalive=yes&fexp=51565116%2C52112905%2C52184231%2C52250513&c=ANDROID_VR&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=FAKESIG&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=FAKESIG",
+    "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+    "bitrate": 130413,
+    "initRange": {
+     "start": "0",
+     "end": "631"
+    },
+    "indexRange": {
+     "start": "632",
+     "end": "975"
+    },
+    "lastModified": "1712653867474717",
+    "contentLength": "4083640",
+    "quality": "tiny",
+    "projectionType": "RECTANGULAR",
+    "averageBitrate": 129505,
+    "highReplication": true,
+    "audioQuality": "AUDIO_QUALITY_MEDIUM",
+    "approxDurationMs": "252261",
+    "audioSampleRate": "44100",
+    "audioChannels": 2,
+    "loudnessDb": 6.69,
+    "trackAbsoluteLoudnessLkfs": -7.31,
+    "qualityOrdinal": "QUALITY_ORDINAL_UNKNOWN"
+   }
+  ]
+ }
+}
