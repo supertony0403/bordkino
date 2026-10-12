@@ -7,7 +7,7 @@ include $(THEOS)/makefiles/common.mk
 APPLICATION_NAME = Bordkino BordkinoNavi
 
 COMMON_FILES = $(wildcard Sources/Core/*.m) $(wildcard Sources/Player/*.m) $(wildcard Sources/Phone/*.m) Sources/Car/BKDiagnosticsViewController.m
-COMMON_FRAMEWORKS = UIKit CarPlay AVFoundation AVKit CoreMedia CoreVideo QuartzCore JavaScriptCore CoreLocation MediaPlayer WebKit
+COMMON_FRAMEWORKS = UIKit CarPlay AVFoundation AVKit CoreMedia CoreVideo CoreImage Metal QuartzCore JavaScriptCore CoreLocation MediaPlayer WebKit
 COMMON_CFLAGS = -fobjc-arc -ISources/Core -ISources/Player -ISources/Phone -ISources/Car -ISources/Navi -Wno-unguarded-availability-new
 
 Bordkino_FILES = $(COMMON_FILES) $(filter-out Sources/Car/BKDiagnosticsViewController.m,$(wildcard Sources/Car/*.m))
