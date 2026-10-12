@@ -1,0 +1,9 @@
+#!/var/jb/bin/sh
+case "$1" in
+  remove|purge)
+    for app in Bordkino BordkinoNavi; do
+      /var/jb/usr/bin/uicache -u "/var/jb/Applications/$app.app" 2>/dev/null || true
+    done
+    ;;
+esac
+exit 0

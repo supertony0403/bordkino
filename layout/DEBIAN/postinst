@@ -1,0 +1,6 @@
+#!/var/jb/bin/sh
+# Register both app bundles with the home screen / CarPlay.
+for app in Bordkino BordkinoNavi; do
+  /var/jb/usr/bin/uicache -p "/var/jb/Applications/$app.app" || true
+done
+exit 0

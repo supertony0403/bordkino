@@ -1,0 +1,10 @@
+{
+  "name": "bordkino-extractor",
+  "private": true,
+  "version": "1.0.0",
+  "description": "YouTube logic for Bordkino (runs in JavaScriptCore and Node)",
+  "scripts": {
+    "test": "node --test test/",
+    "live": "node tools/live-smoke.mjs"
+  }
+}

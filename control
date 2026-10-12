@@ -1,0 +1,10 @@
+Package: de.benzsw.bordkino
+Name: Bordkino
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: YouTube und Videolinks auf dem CarPlay-Display. Zwei Varianten: Bordkino (volle Touch-Oberfläche) und Bordkino Navi (CarPlay-Vorlagen).
+Maintainer: supertony0403
+Author: supertony0403
+Section: Utilities
+Depends: firmware (>= 15.0), uikittools
+Homepage: https://github.com/supertony0403/bordkino
