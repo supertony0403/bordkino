@@ -9,6 +9,7 @@
 
 NSNotificationName const BKPlayerStateDidChangeNotification = @"BKPlayerStateDidChangeNotification";
 NSNotificationName const BKPlayerDidStartVideoNotification = @"BKPlayerDidStartVideoNotification";
+NSString *const BKTestStreamURL = @"https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8";
 
 static void *kItemStatusContext = &kItemStatusContext;
 static void *kTimeControlContext = &kTimeControlContext;

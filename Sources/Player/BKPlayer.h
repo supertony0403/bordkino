@@ -4,6 +4,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 extern NSNotificationName const BKPlayerStateDidChangeNotification;
+/// Apple's public HLS sample (diagnostics: separates rendering from YouTube problems).
+extern NSString *const BKTestStreamURL;
 /// Posted when a new item starts loading (UI shows the player).
 extern NSNotificationName const BKPlayerDidStartVideoNotification;
 
