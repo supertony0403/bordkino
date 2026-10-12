@@ -116,6 +116,7 @@
 
 - (void)libraryChanged {
     if (self.reloadsOnLibraryChange) [self reload];
+    else [_collection.collectionViewLayout invalidateLayout];
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -184,7 +185,9 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)layout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewFlowLayout *flow = (UICollectionViewFlowLayout *)layout;
     CGFloat available = collectionView.bounds.size.width - flow.sectionInset.left - flow.sectionInset.right;
-    NSInteger columns = MAX(2, (NSInteger)floor((available + flow.minimumInteritemSpacing) / (240 + flow.minimumInteritemSpacing)));
+    BKTileSize size = [BKLibrary shared].tileSize;
+    CGFloat target = size == BKTileSizeSmall ? 190 : (size == BKTileSizeLarge ? 330 : 240);
+    NSInteger columns = MAX(size == BKTileSizeLarge ? 1 : 2, (NSInteger)floor((available + flow.minimumInteritemSpacing) / (target + flow.minimumInteritemSpacing)));
     CGFloat width = floor((available - flow.minimumInteritemSpacing * (columns - 1)) / columns);
     return CGSizeMake(width, width * 9.0 / 16.0 + 70);
 }

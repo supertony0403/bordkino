@@ -9,6 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// process – the fallback if A stays black on the CarPlay display.
 @interface BKVideoSurface : UIView
 @property (nonatomic) BKRenderer renderer;
+@property (nonatomic) BKVideoFill fill;
 @property (nonatomic, strong, nullable) AVPlayer *player;
 /// Frames drawn by renderer B since the last reset (diagnostics).
 @property (nonatomic, readonly) NSUInteger pumpedFrames;

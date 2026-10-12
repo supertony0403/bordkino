@@ -93,6 +93,7 @@
     BKPlayer *player = [BKPlayer shared];
     BKLibrary *library = [BKLibrary shared];
     _surface.renderer = library.renderer;
+    _surface.fill = library.videoFill;
     _driveCover.hidden = !(library.driveLockEnabled && [BKDriveGuard shared].driving && player.currentVideo != nil);
 
     switch (player.state) {

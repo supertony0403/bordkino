@@ -48,7 +48,7 @@ static const NSUInteger kMaxPositions = 200;
         if (c) [_channels addObject:c];
     }
     _positions = [([root[@"positions"] isKindOfClass:NSDictionary.class] ? root[@"positions"] : @{}) mutableCopy];
-    NSMutableDictionary *settings = [@{ @"driveLock": @YES, @"renderer": @(BKRendererLayer), @"maxResolution": @0, @"keepPhoneAwake": @NO } mutableCopy];
+    NSMutableDictionary *settings = [@{ @"driveLock": @YES, @"renderer": @(BKRendererLayer), @"maxResolution": @0, @"keepPhoneAwake": @NO, @"videoFill": @(BKVideoFillFit), @"tileSize": @(BKTileSizeMedium) } mutableCopy];
     if ([root[@"settings"] isKindOfClass:NSDictionary.class]) [settings addEntriesFromDictionary:root[@"settings"]];
     _settings = settings;
     [[NSNotificationCenter defaultCenter] postNotificationName:BKLibraryDidChangeNotification object:self];
@@ -150,6 +150,16 @@ static const NSUInteger kMaxPositions = 200;
 - (void)setRenderer:(BKRenderer)v { _settings[@"renderer"] = @(v); [self changed]; }
 - (NSInteger)maxResolution { return [_settings[@"maxResolution"] integerValue]; }
 - (void)setMaxResolution:(NSInteger)v { _settings[@"maxResolution"] = @(v); [self changed]; }
+- (BKVideoFill)videoFill {
+    NSInteger v = [_settings[@"videoFill"] integerValue];
+    return (v >= BKVideoFillFit && v <= BKVideoFillStretch) ? (BKVideoFill)v : BKVideoFillFit;
+}
+- (void)setVideoFill:(BKVideoFill)v { _settings[@"videoFill"] = @(v); [self changed]; }
+- (BKTileSize)tileSize {
+    NSInteger v = [_settings[@"tileSize"] integerValue];
+    return (v >= BKTileSizeSmall && v <= BKTileSizeLarge) ? (BKTileSize)v : BKTileSizeMedium;
+}
+- (void)setTileSize:(BKTileSize)v { _settings[@"tileSize"] = @(v); [self changed]; }
 - (BOOL)keepPhoneAwake { return [_settings[@"keepPhoneAwake"] boolValue]; }
 - (void)setKeepPhoneAwake:(BOOL)v { _settings[@"keepPhoneAwake"] = @(v); [self changed]; }
 

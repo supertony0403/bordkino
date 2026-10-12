@@ -47,7 +47,7 @@ static NSString *BKVariantName(void) {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
-        case BKSectionPlayback: return 5;
+        case BKSectionPlayback: return 7;
         case BKSectionCar: return 2;
         case BKSectionModule: return 2;
         case BKSectionDiagnostics: return 3;
@@ -62,7 +62,7 @@ static NSString *BKVariantName(void) {
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     switch (section) {
         case BKSectionPlayback:
-            return @"Fahrsperre: Ab etwa 10 km/h wird nur das Bild ausgeblendet, der Ton läuft weiter. Videos während der Fahrt anzusehen ist nach § 23 Abs. 1a StVO verboten.\n\nBleibt das Bild im Auto schwarz, Renderer auf „B“ stellen.";
+            return @"Fahrsperre: Ab etwa 10 km/h wird nur das Bild ausgeblendet, der Ton läuft weiter. Videos während der Fahrt anzusehen ist nach § 23 Abs. 1a StVO verboten.\n\nBleibt das Bild im Auto schwarz, Renderer auf „B“ stellen.\n\nBildformat „Füllen“ nutzt breite Autodisplays ohne schwarze Balken (schneidet oben/unten etwas ab). „Qualität“ begrenzt die Auflösung – 720p spart mobiles Datenvolumen.";
         case BKSectionModule:
             return @"Das Modul wird täglich aus dem GitHub-Repo nachgeladen, wenn YouTube etwas ändert – ohne neue App-Version.";
     }
@@ -116,9 +116,11 @@ static NSString *BKVariantName(void) {
                     return cell;
                 }
                 case 2: {
-                    NSInteger idx = library.maxResolution == 720 ? 1 : (library.maxResolution == 480 ? 2 : 0);
-                    return [self segmentCell:@"Qualität" items:@[@"Auto", @"720p", @"480p"] selected:idx action:@selector(qualityChanged:)];
+                    NSInteger idx = library.maxResolution == 1080 ? 1 : library.maxResolution == 720 ? 2 : (library.maxResolution == 480 ? 3 : 0);
+                    return [self segmentCell:@"Qualität" items:@[@"Auto", @"1080p", @"720p", @"480p"] selected:idx action:@selector(qualityChanged:)];
                 }
+                case 5: return [self segmentCell:@"Bildformat" items:@[@"Einpassen", @"Füllen", @"Strecken"] selected:library.videoFill action:@selector(fillChanged:)];
+                case 6: return [self segmentCell:@"Kacheln im Auto" items:@[@"S", @"M", @"L"] selected:library.tileSize action:@selector(tileSizeChanged:)];
                 case 3: return [self segmentCell:@"Renderer" items:@[@"A", @"B"] selected:library.renderer action:@selector(rendererChanged:)];
                 case 4: return [self switchCell:@"Handy wach & dunkel" on:library.keepPhoneAwake action:@selector(keepAwakeChanged:)];
             }
@@ -173,7 +175,10 @@ static NSString *BKVariantName(void) {
 - (void)keepAwakeChanged:(UISwitch *)sender { [BKLibrary shared].keepPhoneAwake = sender.on; }
 - (void)rendererChanged:(UISegmentedControl *)sender { [BKLibrary shared].renderer = sender.selectedSegmentIndex == 1 ? BKRendererPump : BKRendererLayer; }
 - (void)qualityChanged:(UISegmentedControl *)sender {
-    [BKLibrary shared].maxResolution = sender.selectedSegmentIndex == 1 ? 720 : (sender.selectedSegmentIndex == 2 ? 480 : 0);
+    NSArray *values = @[@0, @1080, @720, @480];
+    [BKLibrary shared].maxResolution = [values[(NSUInteger)MAX(0, sender.selectedSegmentIndex)] integerValue];
 }
+- (void)fillChanged:(UISegmentedControl *)sender { [BKLibrary shared].videoFill = (BKVideoFill)sender.selectedSegmentIndex; }
+- (void)tileSizeChanged:(UISegmentedControl *)sender { [BKLibrary shared].tileSize = (BKTileSize)sender.selectedSegmentIndex; }
 
 @end

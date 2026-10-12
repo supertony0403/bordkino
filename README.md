@@ -22,7 +22,10 @@ Symbole erscheinen auf dem CarPlay-Homescreen. Nimm die, die läuft.
 
 - YouTube-Suche, Kanäle (ohne Konto, über RSS), Merkliste, Verlauf, Weiterschauen ab letzter Position
 - YouTube-Links und Video-IDs; außerdem direkte `.m3u8`/`.mp4`-Links („und so“)
-- Bild bis 1080p (HLS), Qualität begrenzbar auf 720p/480p fürs mobile Datenvolumen
+- Bild bis 1080p (HLS). **Qualität** wählbar: Auto / 1080p / 720p / 480p (720p spart mobiles Datenvolumen)
+- **Bildformat** für breite Autodisplays: Einpassen (schwarze Balken) / Füllen (randlos, schneidet etwas ab) /
+  Strecken – in den Einstellungen oder direkt im Player umschalten
+- **Kachelgröße** der Auto-Oberfläche: S / M / L (größere Kacheln = größere Schrift und Vorschaubilder)
 - Lenkradtasten: Play/Pause, Vor (+30 s), Zurück (−10 s); Now-Playing-Anzeige mit Vorschaubild
 - CarPlay trennen → Wiedergabe pausiert
 - **Fahrerdisplay** (nur *Bordkino Navi*, nur wenn das Auto Navigations-Apps dort ein Bild anbietet):

@@ -34,6 +34,7 @@ static void *kCurrentItemContext = &kCurrentItemContext;
     if ((self = [super initWithFrame:frame])) {
         self.backgroundColor = UIColor.blackColor;
         self.userInteractionEnabled = NO;
+        self.clipsToBounds = YES;
         _playerLayer = [AVPlayerLayer new];
         _playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
         [self.layer addSublayer:_playerLayer];
@@ -96,6 +97,14 @@ static void *kCurrentItemContext = &kCurrentItemContext;
     _pumpedFrames = 0;
     BKLogf(@"Renderer %@ aktiv", renderer == BKRendererPump ? @"B (Bildpumpe/Metal)" : @"A (AVPlayerLayer)");
     [self apply];
+}
+
+- (void)setFill:(BKVideoFill)fill {
+    if (_fill == fill) return;
+    _fill = fill;
+    _playerLayer.videoGravity = fill == BKVideoFillZoom ? AVLayerVideoGravityResizeAspectFill
+                              : fill == BKVideoFillStretch ? AVLayerVideoGravityResize : AVLayerVideoGravityResizeAspect;
+    [self draw];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -183,10 +192,12 @@ static void *kCurrentItemContext = &kCurrentItemContext;
     CGSize target = _metalLayer.drawableSize;
     CGRect extent = frame.extent;
     if (extent.size.width < 1 || extent.size.height < 1) return;
-    CGFloat scale = MIN(target.width / extent.size.width, target.height / extent.size.height);
-    CGFloat dx = (target.width - extent.size.width * scale) / 2.0;
-    CGFloat dy = (target.height - extent.size.height * scale) / 2.0;
-    CIImage *scaled = [frame imageByApplyingTransform:CGAffineTransformMake(scale, 0, 0, scale, dx - extent.origin.x * scale, dy - extent.origin.y * scale)];
+    CGFloat sx = target.width / extent.size.width, sy = target.height / extent.size.height;
+    if (self.fill == BKVideoFillFit) sx = sy = MIN(sx, sy);
+    else if (self.fill == BKVideoFillZoom) sx = sy = MAX(sx, sy);
+    CGFloat dx = (target.width - extent.size.width * sx) / 2.0;
+    CGFloat dy = (target.height - extent.size.height * sy) / 2.0;
+    CIImage *scaled = [frame imageByApplyingTransform:CGAffineTransformMake(sx, 0, 0, sy, dx - extent.origin.x * sx, dy - extent.origin.y * sy)];
     CGRect bounds = CGRectMake(0, 0, target.width, target.height);
     CIImage *black = [[CIImage imageWithColor:[CIColor colorWithRed:0 green:0 blue:0]] imageByCroppingToRect:bounds];
     CIImage *composed = [scaled imageByCompositingOverImage:black];

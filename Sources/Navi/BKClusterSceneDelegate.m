@@ -67,6 +67,7 @@ static const NSTimeInterval kRecheckInterval = 1;
         BKLogf(@"Fahrerdisplay: Bild %@", visible ? @"an (Stillstand bestätigt)" : @"aus");
     }
     _surface.renderer = [BKLibrary shared].renderer;
+    _surface.fill = [BKLibrary shared].videoFill;
     _surface.player = visible ? [BKPlayer shared].player : nil;
     _surface.hidden = !visible;
     _label.hidden = visible || !hasVideo;

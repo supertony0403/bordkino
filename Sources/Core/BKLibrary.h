@@ -10,6 +10,18 @@ typedef NS_ENUM(NSInteger, BKRenderer) {
     BKRendererPump = 1,    // AVPlayerItemVideoOutput -> layer.contents
 };
 
+typedef NS_ENUM(NSInteger, BKVideoFill) {
+    BKVideoFillFit = 0,       // whole picture, black bars
+    BKVideoFillZoom = 1,      // fills the screen, crops edges
+    BKVideoFillStretch = 2,   // fills the screen, distorts
+};
+
+typedef NS_ENUM(NSInteger, BKTileSize) {
+    BKTileSizeSmall = 0,
+    BKTileSizeMedium = 1,
+    BKTileSizeLarge = 2,
+};
+
 /// Persistent user data shared by both app variants (library.json in BKDataDirectory()).
 /// Main thread only.
 @interface BKLibrary : NSObject
@@ -35,7 +47,9 @@ typedef NS_ENUM(NSInteger, BKRenderer) {
 // Settings
 @property (nonatomic) BOOL driveLockEnabled;     // default YES
 @property (nonatomic) BKRenderer renderer;        // default BKRendererLayer
-@property (nonatomic) NSInteger maxResolution;    // 0 = auto, 720, 480
+@property (nonatomic) NSInteger maxResolution;    // 0 = auto, 1080, 720, 480
+@property (nonatomic) BKVideoFill videoFill;      // default fit
+@property (nonatomic) BKTileSize tileSize;        // car grid, default medium
 @property (nonatomic) BOOL keepPhoneAwake;        // default NO
 @end
 

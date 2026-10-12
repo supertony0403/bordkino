@@ -20,6 +20,7 @@ static NSString *BKFormatTime(NSTimeInterval t) {
     UIButton *_playButton;
     UIButton *_favoriteButton;
     UIButton *_rendererButton;
+    UIButton *_fillButton;
     UIButton *_retryButton;
     NSTimer *_clock;
     NSTimer *_hideTimer;
@@ -92,7 +93,13 @@ static NSString *BKFormatTime(NSTimeInterval t) {
     _rendererButton.accessibilityLabel = @"Renderer wechseln";
     [_rendererButton addTarget:self action:@selector(switchRenderer) forControlEvents:UIControlEventTouchUpInside];
     [_rendererButton.widthAnchor constraintGreaterThanOrEqualToConstant:self.carStyle ? 64 : 44].active = YES;
-    UIStackView *progress = [[UIStackView alloc] initWithArrangedSubviews:@[_slider, _timeLabel, _rendererButton]];
+    _fillButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _fillButton.titleLabel.font = _rendererButton.titleLabel.font;
+    _fillButton.tintColor = UIColor.whiteColor;
+    _fillButton.accessibilityLabel = @"Bildformat wechseln";
+    [_fillButton addTarget:self action:@selector(switchFill) forControlEvents:UIControlEventTouchUpInside];
+    [_fillButton.widthAnchor constraintGreaterThanOrEqualToConstant:self.carStyle ? 110 : 80].active = YES;
+    UIStackView *progress = [[UIStackView alloc] initWithArrangedSubviews:@[_slider, _timeLabel, _fillButton, _rendererButton]];
     progress.spacing = 12;
     progress.alignment = UIStackViewAlignmentCenter;
 
@@ -159,6 +166,8 @@ static NSString *BKFormatTime(NSTimeInterval t) {
     [_favoriteButton setImage:[UIImage systemImageNamed:fav ? @"star.fill" : @"star" withConfiguration:small] forState:UIControlStateNormal];
     _favoriteButton.tintColor = fav ? [UIColor colorWithRed:0.96 green:0.62 blue:0.04 alpha:1] : UIColor.whiteColor;
     [_rendererButton setTitle:[BKLibrary shared].renderer == BKRendererPump ? @"B" : @"A" forState:UIControlStateNormal];
+    BKVideoFill fill = [BKLibrary shared].videoFill;
+    [_fillButton setTitle:fill == BKVideoFillZoom ? @"⛶ Füllen" : (fill == BKVideoFillStretch ? @"⇔ Strecken" : @"▭ Einpassen") forState:UIControlStateNormal];
     if (player.state == BKPlayerStateFailed || player.state == BKPlayerStatePaused) [self showControls];
     [self updateTime];
 }
@@ -230,6 +239,12 @@ static NSString *BKFormatTime(NSTimeInterval t) {
 - (void)switchRenderer {
     BKLibrary *library = [BKLibrary shared];
     library.renderer = library.renderer == BKRendererPump ? BKRendererLayer : BKRendererPump;
+    [self scheduleHide];
+}
+
+- (void)switchFill {
+    BKLibrary *library = [BKLibrary shared];
+    library.videoFill = (BKVideoFill)((library.videoFill + 1) % 3);
     [self scheduleHide];
 }
 

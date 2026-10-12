@@ -176,7 +176,9 @@ static BOOL BKIsYouTubeHost(NSString *host) {
 
 - (void)applyMaxResolutionToItem:(AVPlayerItem *)item {
     NSInteger max = [BKLibrary shared].maxResolution;
-    item.preferredMaximumResolution = max == 720 ? CGSizeMake(1280, 720) : (max == 480 ? CGSizeMake(854, 480) : CGSizeZero);
+    item.preferredMaximumResolution = max == 1080 ? CGSizeMake(1920, 1080)
+                                    : max == 720 ? CGSizeMake(1280, 720)
+                                    : max == 480 ? CGSizeMake(854, 480) : CGSizeZero;
 }
 
 #pragma mark Failure handling
