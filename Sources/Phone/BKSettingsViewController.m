@@ -7,6 +7,7 @@
 #import "BKPlayer.h"
 #import "BKLogViewController.h"
 #import "BKVideoListViewController.h"
+#import "BKDiagnosticsViewController.h"
 
 typedef NS_ENUM(NSInteger, BKSection) { BKSectionPlayback, BKSectionCar, BKSectionModule, BKSectionDiagnostics, BKSectionCount };
 
@@ -49,7 +50,7 @@ static NSString *BKVariantName(void) {
         case BKSectionPlayback: return 5;
         case BKSectionCar: return 2;
         case BKSectionModule: return 2;
-        case BKSectionDiagnostics: return 2;
+        case BKSectionDiagnostics: return 3;
     }
     return 0;
 }
@@ -136,9 +137,10 @@ static NSString *BKVariantName(void) {
                 return cell;
             }
         case BKSectionDiagnostics: {
-            UITableViewCell *cell = [self cellWithText:indexPath.row == 0 ? @"Protokoll anzeigen" : @"Testvideo am Handy (Apple)" detail:nil];
+            NSArray *titles = @[@"Protokoll anzeigen", @"Testvideo am Handy (Apple)", @"Testbild & Renderer-Test"];
+            UITableViewCell *cell = [self cellWithText:titles[indexPath.row] detail:nil];
             cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-            cell.accessoryType = indexPath.row == 0 ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
+            cell.accessoryType = indexPath.row == 1 ? UITableViewCellAccessoryNone : UITableViewCellAccessoryDisclosureIndicator;
             return cell;
         }
     }
@@ -160,6 +162,8 @@ static NSString *BKVariantName(void) {
     } else if (indexPath.section == BKSectionDiagnostics && indexPath.row == 1) {
         [[BKPlayer shared] playVideo:[BKVideo videoWithDirectURL:[NSURL URLWithString:BKTestStreamURL] title:@"Apple-Testvideo (BipBop)"]];
         BKPresentPhonePlayer(self);
+    } else if (indexPath.section == BKSectionDiagnostics && indexPath.row == 2) {
+        [self.navigationController pushViewController:[BKDiagnosticsViewController new] animated:YES];
     }
 }
 
